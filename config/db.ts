@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 dotenv.config();
 
-const connectDB = async (): Promise<void> => {
+const connectDB = async () => {
   try {
     await mongoose.connect(process.env.DB_URL as string);
   } catch (error) {
@@ -11,4 +11,4 @@ const connectDB = async (): Promise<void> => {
   }
 };
 
-export default connectDB();
+export default connectDB;

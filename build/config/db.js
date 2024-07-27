@@ -12,37 +12,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const cors_1 = __importDefault(require("cors"));
+const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
-const bodyParser = require("body-parser");
-const logger_1 = __importDefault(require("./logger/logger"));
-const db_1 = __importDefault(require("./config/db"));
-const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
 dotenv_1.default.config();
-const app = (0, express_1.default)();
-const PORT = process.env.PORT || 3001;
-app.use(bodyParser.json({ limit: "10mb" }));
-app.use(bodyParser.urlencoded({
-    limit: "10mb",
-    extended: true,
-}));
-app.use((0, cors_1.default)({
-    origin: process.env.NODE_ENV || "*",
-}));
-app.use('/', userRoutes_1.default);
-// Basic Route
-app.get("/", (req, res) => {
-    res.send("E-Commerce Platform with Advanced Features");
-});
-// Start the server :
-app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
+const connectDB = () => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        yield (0, db_1.default)();
-        logger_1.default.info(`Connected to the DB ! and Server is running on PORT ${PORT}`);
+        yield mongoose_1.default.connect(process.env.DB_URL);
     }
     catch (error) {
         console.error(error);
+        process.exit(1);
     }
-}));
-//# sourceMappingURL=index.js.map
+});
+exports.default = connectDB;
+//# sourceMappingURL=db.js.map
