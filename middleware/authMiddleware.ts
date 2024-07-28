@@ -1,10 +1,14 @@
 import { Request, Response, NextFunction } from "express";
-import User from "../models/userModel";
 import logger from "../logger/logger";
 import jwt from "jsonwebtoken";
+import { JwtPayload } from "jsonwebtoken";
+
+interface CustomRequest extends Request {
+  user?: { role: string } | JwtPayload | string;
+}
 
 export const authorization = async (
-  req: Request,
+  req: CustomRequest,
   res: Response,
   next: NextFunction
 ) => {
@@ -21,12 +25,13 @@ export const authorization = async (
       return res.status(401).json({ message: "Authorization token missing" });
     }
 
-    jwt.verify(token, "your_jwt_secret", (err, decoded) => {
+    jwt.verify(token, "your_jwt_secret", async (err, decoded) => {
       if (err) {
         logger.error(`Invalid Token: ${err.message}`);
         return res.status(401).json({ message: "Invalid token" });
       } else {
         logger.info("Token verified successfully");
+        req.user = decoded;
         next();
       }
     });
@@ -36,17 +41,41 @@ export const authorization = async (
   }
 };
 
-export const verifyAdmin = async (
-  req: Request,
+export const roleBasedAccess = async (
+  req: CustomRequest,
   res: Response,
   next: NextFunction
 ) => {
-  const userId = req;
-  const user = await User.findById(userId);
+  const { user } = req;
+  try {
+    if (!user) {
+      logger.error("Unauthorized access - User not found");
+      return res.status(401).json({ message: "Unauthorized: User not found" });
+    }
 
-  if (user && user.role === "admin") {
-    next();
-  } else {
-    res.status(403).json({ message: "Forbidden" });
+    let role: string | undefined;
+
+    if (typeof user === 'string') {
+      const decoded = jwt.decode(user);
+      role = (decoded as any)?.role;
+    } else if ('role' in user) {
+      role = user.role;
+    } else if (typeof user === 'object') {
+      role = (user as any).role;
+    }
+
+    if (role && role === "admin") {
+      next();
+    } else {
+      logger.error("Unauthorized access - Forbidden");
+      res
+        .status(403)
+        .json({ message: "Forbidden: Unauthorized access - admin protected" });
+    }
+  } catch (error) {
+    logger.error(`Error during role-based access check: ${error}`);
+    return res
+      .status(500)
+      .json({ message: "Internal Server Error: Please try again later" });
   }
 };

@@ -31,8 +31,7 @@ exports.register = register;
 const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { email, password } = req.body;
     try {
-        const user = yield (0, authService_1.loginUser)(email, password);
-        const token = user;
+        const token = yield (0, authService_1.loginUser)(email, password);
         res.status(200).json({ token, message: `User logged in successfully !` });
     }
     catch (error) {

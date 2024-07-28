@@ -43,3 +43,75 @@
 2024-07-28T13:48:42.182Z [info]: Connected to the DB ! and Server is running on PORT 9800
 2024-07-28T13:51:17.936Z [info]: Connected to the DB ! and Server is running on PORT 9800
 2024-07-28T13:54:23.762Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:07:02.203Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:08:01.029Z [info]: User Registered Successfully - admin2@mail.com
+2024-07-28T14:08:43.171Z [info]: User Registered Successfully - test2@mail.com
+2024-07-28T14:14:23.562Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:15:24.121Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:15:35.670Z [error]: Invalid Token: invalid signature
+2024-07-28T14:15:46.122Z [info]: User Login Failed: Invalid Credentials- admin@gmail.com
+2024-07-28T14:16:42.042Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:16:44.681Z [info]: User Login Failed: Invalid Credentials- admin@gmail.com
+2024-07-28T14:16:50.645Z [info]: User Login Failed: Invalid Credentials- admin2@gmail.com
+2024-07-28T14:19:40.626Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:19:47.663Z [info]: User Login Failed: Invalid Credentials- admin2@gmail.com
+2024-07-28T14:21:57.007Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:22:02.894Z [info]: User Login Failed: Invalid Credentials - admin2@gmail.com
+2024-07-28T14:22:41.835Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T14:22:57.677Z [error]: Invalid Token: invalid token
+2024-07-28T14:24:34.077Z [error]: Invalid Token: invalid token
+2024-07-28T14:28:23.900Z [info]: User Registered Successfully - test3@mail.com
+2024-07-28T14:28:28.505Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T14:28:43.598Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:28:44.053Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T14:29:49.761Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:29:51.877Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T14:31:08.431Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:31:09.385Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T14:32:16.822Z [info]: Token verified successfully
+2024-07-28T14:33:45.514Z [info]: Token verified successfully
+2024-07-28T14:36:05.112Z [info]: Token verified successfully
+2024-07-28T14:40:06.624Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:40:35.428Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:40:42.305Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:40:44.748Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:40:49.111Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:40:53.183Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:40:58.686Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:42:56.280Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:43:02.889Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T14:43:33.211Z [info]: Token verified successfully
+2024-07-28T14:49:34.944Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:49:55.250Z [info]: Token verified successfully
+2024-07-28T14:51:14.800Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:51:21.995Z [info]: Token verified successfully
+2024-07-28T14:58:53.838Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:59:01.226Z [info]: Token verified successfully
+2024-07-28T14:59:34.720Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T14:59:37.375Z [info]: Token verified successfully
+2024-07-28T15:00:54.136Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:01:03.058Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:01:06.111Z [info]: Token verified successfully
+2024-07-28T15:03:07.697Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:03:11.598Z [info]: Token verified successfully
+2024-07-28T15:04:39.504Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:04:42.762Z [info]: Token verified successfully
+2024-07-28T15:04:57.671Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T15:09:07.531Z [info]: Token verified successfully
+2024-07-28T15:10:19.775Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:12:31.649Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:13:29.551Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:43:12.094Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T15:51:33.839Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:06:05.699Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:06:38.498Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:07:13.755Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:07:14.911Z [error]: Unauthorized access - User not found
+2024-07-28T16:07:56.217Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:07:58.007Z [error]: Invalid Token: jwt expired
+2024-07-28T16:08:05.973Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T16:08:17.283Z [info]: Token verified successfully
+2024-07-28T16:08:35.485Z [info]: Token verified successfully
+2024-07-28T16:08:59.314Z [info]: Token verified successfully
+2024-07-28T16:08:59.516Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:12:01.894Z [info]: Connected to the DB ! and Server is running on PORT 9800
