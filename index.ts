@@ -4,7 +4,8 @@ import dotenv from "dotenv";
 import bodyParser = require("body-parser");
 import logger from "./logger/logger";
 import connectDB from "./config/db";
-import userRoutes from './routes/userRoutes';
+import userRoutes from './routes/authRoutes';
+import productRoutes from './routes/productRoutes';
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use(
 );
 
 app.use('/', userRoutes);
+app.use('/', productRoutes);
 
 // Basic Route
 app.get("/", (req: Request, res: Response) => {

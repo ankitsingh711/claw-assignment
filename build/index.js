@@ -18,7 +18,8 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const bodyParser = require("body-parser");
 const logger_1 = __importDefault(require("./logger/logger"));
 const db_1 = __importDefault(require("./config/db"));
-const userRoutes_1 = __importDefault(require("./routes/userRoutes"));
+const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
+const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3001;
@@ -30,7 +31,8 @@ app.use(bodyParser.urlencoded({
 app.use((0, cors_1.default)({
     origin: process.env.NODE_ENV || "*",
 }));
-app.use('/', userRoutes_1.default);
+app.use('/', authRoutes_1.default);
+app.use('/', productRoutes_1.default);
 // Basic Route
 app.get("/", (req, res) => {
     res.send("E-Commerce Platform with Advanced Features");
