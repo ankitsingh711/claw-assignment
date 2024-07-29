@@ -6,6 +6,11 @@ import logger from "./logger/logger";
 import connectDB from "./config/db";
 import userRoutes from './routes/authRoutes';
 import productRoutes from './routes/productRoutes';
+import cartRoutes from './routes/cartRoutes';
+import orderRoutes from './routes/orderRoutes';
+import sessionRoutes from './routes/sessionRoutes';
+// import paymentRoutes from './routes/paymentRoutes';
+import cookieParser = require("cookie-parser");
 
 dotenv.config();
 
@@ -26,9 +31,14 @@ app.use(
     origin: process.env.NODE_ENV || "*",
   })
 );
+app.use(cookieParser());
 
 app.use('/', userRoutes);
 app.use('/', productRoutes);
+app.use('/', cartRoutes);
+app.use('/', orderRoutes);
+app.use('/', sessionRoutes);
+// app.use('/', paymentRoutes);
 
 // Basic Route
 app.get("/", (req: Request, res: Response) => {

@@ -115,3 +115,105 @@
 2024-07-28T16:08:59.314Z [info]: Token verified successfully
 2024-07-28T16:08:59.516Z [info]: Connected to the DB ! and Server is running on PORT 9800
 2024-07-28T16:12:01.894Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:14:11.856Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T16:14:15.645Z [info]: Token verified successfully
+2024-07-28T16:15:01.518Z [info]: User logged in successfully - ankit.singh@mail.com
+2024-07-28T16:15:17.599Z [info]: Token verified successfully
+2024-07-28T16:15:17.599Z [error]: Unauthorized access - Forbidden
+2024-07-28T16:15:43.627Z [info]: User logged in successfully - admin@mail.com
+2024-07-28T16:15:53.215Z [info]: Token verified successfully
+2024-07-28T16:16:06.543Z [error]: Invalid Token: jwt expired
+2024-07-28T16:16:31.520Z [info]: Token verified successfully
+2024-07-28T16:50:19.674Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-28T17:01:32.069Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T02:52:26.970Z [error]: Invalid Token: jwt expired
+2024-07-29T02:53:09.105Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T02:53:26.522Z [info]: Token verified successfully
+2024-07-29T02:54:14.880Z [info]: Token verified successfully
+2024-07-29T02:55:33.195Z [info]: Token verified successfully
+2024-07-29T02:56:36.996Z [error]: Invalid Token: jwt expired
+2024-07-29T02:56:46.666Z [info]: Token verified successfully
+2024-07-29T02:57:16.439Z [info]: Token verified successfully
+2024-07-29T03:01:52.365Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:01:52.535Z [info]: Token verified successfully
+2024-07-29T03:01:52.539Z [info]: Token verified successfully
+2024-07-29T03:02:19.257Z [info]: Token verified successfully
+2024-07-29T03:02:19.259Z [info]: Token verified successfully
+2024-07-29T03:02:36.761Z [info]: Token verified successfully
+2024-07-29T03:02:36.763Z [info]: Token verified successfully
+2024-07-29T03:05:02.496Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:05:06.661Z [info]: Token verified successfully
+2024-07-29T03:05:06.663Z [info]: Token verified successfully
+2024-07-29T03:06:07.011Z [info]: Token verified successfully
+2024-07-29T03:06:07.017Z [info]: Token verified successfully
+2024-07-29T03:06:07.640Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:07:58.013Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:08:02.117Z [info]: Token verified successfully
+2024-07-29T03:08:02.119Z [info]: Token verified successfully
+2024-07-29T03:09:50.204Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:09:54.621Z [info]: Token verified successfully
+2024-07-29T03:09:54.624Z [info]: Token verified successfully
+2024-07-29T03:12:12.197Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:12:18.931Z [info]: Token verified successfully
+2024-07-29T03:12:18.934Z [info]: Token verified successfully
+2024-07-29T03:12:19.047Z [error]: Server Error - while adding product to the cart SyntaxError: Expected property name or '}' in JSON at position 4 (line 2 column 3)
+2024-07-29T03:14:53.559Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:15:33.029Z [info]: Token verified successfully
+2024-07-29T03:15:33.031Z [info]: Token verified successfully
+2024-07-29T03:15:44.025Z [info]: Token verified successfully
+2024-07-29T03:15:44.027Z [info]: Token verified successfully
+2024-07-29T03:17:00.520Z [info]: Token verified successfully
+2024-07-29T03:17:00.524Z [info]: Token verified successfully
+2024-07-29T03:17:05.563Z [info]: Token verified successfully
+2024-07-29T03:17:05.566Z [info]: Token verified successfully
+2024-07-29T03:31:43.868Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:35:46.750Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:37:33.971Z [info]: Token verified successfully
+2024-07-29T03:37:33.976Z [info]: Token verified successfully
+2024-07-29T03:37:58.842Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:38:11.413Z [info]: Token verified successfully
+2024-07-29T03:38:11.416Z [info]: Token verified successfully
+2024-07-29T03:38:21.836Z [info]: Token verified successfully
+2024-07-29T03:38:21.839Z [info]: Token verified successfully
+2024-07-29T03:38:21.842Z [info]: Token verified successfully
+2024-07-29T03:40:39.785Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:40:43.049Z [info]: Token verified successfully
+2024-07-29T03:40:43.051Z [info]: Token verified successfully
+2024-07-29T03:40:43.054Z [info]: Token verified successfully
+2024-07-29T03:40:55.892Z [info]: Token verified successfully
+2024-07-29T03:40:55.896Z [info]: Token verified successfully
+2024-07-29T03:42:29.270Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:42:34.959Z [info]: Token verified successfully
+2024-07-29T03:42:34.962Z [info]: Token verified successfully
+2024-07-29T03:43:16.532Z [info]: Token verified successfully
+2024-07-29T03:43:16.536Z [info]: Token verified successfully
+2024-07-29T03:43:16.539Z [info]: Token verified successfully
+2024-07-29T03:47:40.693Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:47:46.155Z [info]: Token verified successfully
+2024-07-29T03:47:46.157Z [info]: Token verified successfully
+2024-07-29T03:47:46.158Z [info]: Token verified successfully
+2024-07-29T03:47:58.583Z [info]: Token verified successfully
+2024-07-29T03:47:58.587Z [info]: Token verified successfully
+2024-07-29T03:47:58.589Z [info]: Token verified successfully
+2024-07-29T03:59:18.486Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T03:59:38.133Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T04:00:10.820Z [error]: Invalid Token: jwt expired
+2024-07-29T04:00:17.359Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T04:00:32.133Z [info]: Token verified successfully
+2024-07-29T04:00:32.138Z [info]: Token verified successfully
+2024-07-29T04:00:32.141Z [info]: Token verified successfully
+2024-07-29T04:00:32.143Z [info]: Token verified successfully
+2024-07-29T04:01:26.575Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T04:01:28.162Z [info]: Token verified successfully
+2024-07-29T04:01:28.166Z [info]: Token verified successfully
+2024-07-29T04:01:28.168Z [info]: Token verified successfully
+2024-07-29T04:01:28.171Z [info]: Token verified successfully
+2024-07-29T04:01:52.446Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T04:01:54.546Z [info]: Token verified successfully
+2024-07-29T04:01:54.550Z [info]: Token verified successfully
+2024-07-29T04:01:54.553Z [info]: Token verified successfully
+2024-07-29T04:01:54.555Z [info]: Token verified successfully
+2024-07-29T04:40:16.515Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T04:41:22.204Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T04:46:34.347Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T04:46:35.049Z [info]: User logged in successfully - admin@mail.com

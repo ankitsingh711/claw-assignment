@@ -30,11 +30,9 @@ const authorization = (req, res, next) => __awaiter(void 0, void 0, void 0, func
                 logger_1.default.error(`Invalid Token: ${err.message}`);
                 return res.status(401).json({ message: "Invalid token" });
             }
-            else {
-                logger_1.default.info("Token verified successfully");
-                req.user = decoded;
-                next();
-            }
+            req.user = decoded;
+            logger_1.default.info("Token verified successfully");
+            next();
         }));
     }
     catch (error) {
@@ -51,14 +49,14 @@ const roleBasedAccess = (req, res, next) => __awaiter(void 0, void 0, void 0, fu
             return res.status(401).json({ message: "Unauthorized: User not found" });
         }
         let role;
-        if (typeof user === 'string') {
+        if (typeof user === "string") {
             const decoded = jsonwebtoken_1.default.decode(user);
             role = decoded === null || decoded === void 0 ? void 0 : decoded.role;
         }
-        else if ('role' in user) {
+        else if ("role" in user) {
             role = user.role;
         }
-        else if (typeof user === 'object') {
+        else if (typeof user === "object") {
             role = user.role;
         }
         if (role && role === "admin") {

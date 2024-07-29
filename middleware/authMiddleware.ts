@@ -29,11 +29,10 @@ export const authorization = async (
       if (err) {
         logger.error(`Invalid Token: ${err.message}`);
         return res.status(401).json({ message: "Invalid token" });
-      } else {
-        logger.info("Token verified successfully");
-        req.user = decoded;
-        next();
       }
+      req.user = decoded;
+      logger.info("Token verified successfully");
+      next();
     });
   } catch (error) {
     logger.error(`Authorization Error: ${error}`);
@@ -55,12 +54,12 @@ export const roleBasedAccess = async (
 
     let role: string | undefined;
 
-    if (typeof user === 'string') {
+    if (typeof user === "string") {
       const decoded = jwt.decode(user);
       role = (decoded as any)?.role;
-    } else if ('role' in user) {
+    } else if ("role" in user) {
       role = user.role;
-    } else if (typeof user === 'object') {
+    } else if (typeof user === "object") {
       role = (user as any).role;
     }
 

@@ -1,4 +1,4 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document } from 'mongoose';
 
 interface IOrder extends Document {
   user: Schema.Types.ObjectId;
@@ -8,17 +8,17 @@ interface IOrder extends Document {
 }
 
 const OrderSchema: Schema = new Schema({
-  user: { type: Schema.Types.ObjectId, ref: "User", required: true },
+  user: { type: Schema.Types.ObjectId, ref: 'User', required: true },
   products: [
     {
-      product: { type: Schema.Types.ObjectId, ref: "Product" },
+      product: { type: Schema.Types.ObjectId, ref: 'Product', required: true },
       quantity: { type: Number, required: true },
     },
   ],
   total: { type: Number, required: true },
-  status: { type: String, enum: ["pending", "completed"], default: "pending" },
+  status: { type: String, enum: ['pending', 'completed'], default: 'pending' },
 });
 
-const Order = mongoose.model<IOrder>("Order", OrderSchema);
+const Order = mongoose.model<IOrder>('Order', OrderSchema);
 
-export default Order;
+export { Order, IOrder };

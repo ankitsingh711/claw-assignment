@@ -1,6 +1,12 @@
 import { Request, Response } from "express";
 import { registerUser, loginUser } from "../services/authService";
 import logger from "../logger/logger";
+import SessionModel from "../models/sessionModel";
+import { JwtPayload } from "jsonwebtoken";
+
+interface CustomRequest extends Request {
+  user?: { role: string } | JwtPayload | string;
+}
 
 export const register = async (req: Request, res: Response) => {
   const { name, email, password, role } = req.body;
@@ -15,11 +21,15 @@ export const register = async (req: Request, res: Response) => {
   }
 };
 
-export const login = async (req: Request, res: Response) => {
+export const login = async (req: CustomRequest, res: Response) => {
   const { email, password } = req.body;
 
   try {
     const token = await loginUser(email, password);
+    const ipAddress = req.socket.remoteAddress;
+
+    const userSession = await new SessionModel({ user: req.user, ipAddress, sessionToken: token.token });
+    await userSession.save();
     res.status(200).json({ token, message: `User logged in successfully !` });
   } catch (error) {
     res.status(400).json({ error: error });

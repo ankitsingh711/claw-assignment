@@ -17,19 +17,19 @@ const bcrypt_1 = __importDefault(require("bcrypt"));
 const dotenv_1 = __importDefault(require("dotenv"));
 const sendMail_1 = require("../services/sendMail");
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const userModel_1 = __importDefault(require("../models/userModel"));
+const userModel_1 = require("../models/userModel");
 const logger_1 = __importDefault(require("../logger/logger"));
 dotenv_1.default.config();
 const registerUser = (name, email, password, role) => __awaiter(void 0, void 0, void 0, function* () {
     // const { data, error } = await supabase.auth.signUp({ email, password });
     // if (error) throw error;
-    const existingUser = yield userModel_1.default.findOne({ email });
+    const existingUser = yield userModel_1.UserModel.findOne({ email });
     if (existingUser) {
         logger_1.default.info(`User registration failed : User already exist - ${email}`);
         return email;
     }
     const hashedPassword = yield bcrypt_1.default.hash(password, 10);
-    const user = new userModel_1.default({ name, email, password: hashedPassword, role });
+    const user = new userModel_1.UserModel({ name, email, password: hashedPassword, role });
     yield user.save();
     (0, sendMail_1.sendMail)([email]);
     return;
@@ -38,7 +38,7 @@ exports.registerUser = registerUser;
 const loginUser = (email, password) => __awaiter(void 0, void 0, void 0, function* () {
     // const { data, error } = await supabase.auth.signInWithPassword({ email, password });
     // if (error) throw error;
-    const user = yield userModel_1.default.findOne({ email });
+    const user = yield userModel_1.UserModel.findOne({ email });
     if (!user) {
         logger_1.default.info(`User Login Failed: Invalid Credentials - ${email}`);
         return { message: "Invalid credentials" };

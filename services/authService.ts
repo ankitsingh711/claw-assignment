@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 import { supabase } from "../config/supabase";
 import { sendMail } from "../services/sendMail";
 import jwt from "jsonwebtoken";
-import UserModel from "../models/userModel";
+import { UserModel } from "../models/userModel";
 import logger from "../logger/logger";
 
 dotenv.config();

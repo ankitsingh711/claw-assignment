@@ -21,4 +21,4 @@ const userSchema = new mongoose.Schema({
 
 const UserModel = mongoose.model<IUser>("User", userSchema);
 
-export default UserModel;
+export { UserModel, IUser };

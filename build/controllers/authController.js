@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.login = exports.register = void 0;
 const authService_1 = require("../services/authService");
 const logger_1 = __importDefault(require("../logger/logger"));
+const sessionModel_1 = __importDefault(require("../models/sessionModel"));
 const register = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { name, email, password, role } = req.body;
     try {
@@ -32,6 +33,9 @@ const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { email, password } = req.body;
     try {
         const token = yield (0, authService_1.loginUser)(email, password);
+        const ipAddress = req.socket.remoteAddress;
+        const userSession = yield new sessionModel_1.default({ user: req.user, ipAddress, sessionToken: token.token });
+        yield userSession.save();
         res.status(200).json({ token, message: `User logged in successfully !` });
     }
     catch (error) {

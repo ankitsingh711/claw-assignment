@@ -10,6 +10,6 @@ const ProductSchema = new mongoose_1.default.Schema({
     price: { type: Number, required: true },
     stock_quantity: { type: Number, required: true },
 });
-const ProductModel = mongoose_1.default.model("products", ProductSchema);
-exports.default = ProductModel;
+const Product = mongoose_1.default.model('Product', ProductSchema);
+exports.default = Product;
 //# sourceMappingURL=productModel.js.map

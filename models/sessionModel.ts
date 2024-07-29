@@ -5,6 +5,9 @@ interface ISession extends Document {
   loginTime: Date;
   logoutTime: Date;
   ipAddress: string;
+  createdAt: Date,
+  updatedAt: Date,
+  sessionToken: string
 }
 
 const SessionSchema: Schema = new Schema({
@@ -12,6 +15,9 @@ const SessionSchema: Schema = new Schema({
   loginTime: { type: Date, default: Date.now },
   logoutTime: { type: Date },
   ipAddress: { type: String, required: true },
+  sessionToken: { type: String },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
 });
 
 const Session = mongoose.model<ISession>("Session", SessionSchema);

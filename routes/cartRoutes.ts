@@ -1,9 +1,12 @@
-import express from 'express';
-import { userLogIn, userRegister } from '../controllers/userController';
-const router = express.Router();
+import { Router } from 'express';
+import { addToCart, getCart } from '../controllers/cartController';
+import { authorization } from '../middleware/authMiddleware';
 
-router.post('/register', userLogIn);
+const router = Router();
 
-router.post('/login', userRegister);
+router.use(authorization);
+
+router.post('/cart', addToCart);
+router.get('/cart', getCart);
 
 export default router;

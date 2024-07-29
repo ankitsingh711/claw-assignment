@@ -20,6 +20,11 @@ const logger_1 = __importDefault(require("./logger/logger"));
 const db_1 = __importDefault(require("./config/db"));
 const authRoutes_1 = __importDefault(require("./routes/authRoutes"));
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
+const cartRoutes_1 = __importDefault(require("./routes/cartRoutes"));
+const orderRoutes_1 = __importDefault(require("./routes/orderRoutes"));
+const sessionRoutes_1 = __importDefault(require("./routes/sessionRoutes"));
+// import paymentRoutes from './routes/paymentRoutes';
+const cookieParser = require("cookie-parser");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const PORT = process.env.PORT || 3001;
@@ -31,8 +36,13 @@ app.use(bodyParser.urlencoded({
 app.use((0, cors_1.default)({
     origin: process.env.NODE_ENV || "*",
 }));
+app.use(cookieParser());
 app.use('/', authRoutes_1.default);
 app.use('/', productRoutes_1.default);
+app.use('/', cartRoutes_1.default);
+app.use('/', orderRoutes_1.default);
+app.use('/', sessionRoutes_1.default);
+// app.use('/', paymentRoutes);
 // Basic Route
 app.get("/", (req, res) => {
     res.send("E-Commerce Platform with Advanced Features");
