@@ -1,20 +1,19 @@
 {
-    "compilerOptions": {
-      "target": "ES6",                          
-      "module": "commonjs",                    
-      "strict": true,                     
-      "esModuleInterop": true,                  
-      "forceConsistentCasingInFileNames": true, 
-      "skipLibCheck": true,                     
-      "outDir": "build",                       
-      "rootDir": "./",                       
-      "sourceMap": true                         
-    },
-    "include": [
-      "src/**/*.ts"                             
-, "index.ts"    ],
-    "exclude": [
-      "node_modules",                                                               
-    ]
-  }
-  
+  "compilerOptions": {
+    "target": "ES6", 
+    "module": "commonjs",
+    "strict": true,                         // Enable all strict type-checking options
+    "esModuleInterop": true,                // Enables emit interoperability between CommonJS and ES Modules
+    "forceConsistentCasingInFileNames": true, // Disallow inconsistently-cased references
+    "skipLibCheck": true,                   // Skip type checking of declaration files
+    "outDir": "./build",                    // Redirect output structure to the 'build' directory
+    "rootDir": "./",                        // Specify the root directory of input files
+    "sourceMap": true                       // Generate source maps for debugging
+  },
+  "include": [
+    "index.ts"                             // Include the TypeScript file in the root directory
+  ],
+  "exclude": [
+    "node_modules"                         // Exclude the node_modules directory
+  ]
+}
