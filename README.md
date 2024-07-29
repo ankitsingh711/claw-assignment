@@ -1,6 +1,6 @@
 # E-Commerce Platform with Advanced Features
 
-# Deplohyed Render Link - https://claw-assignment.onrender.com/
+# Deployed Render Link - https://claw-assignment.onrender.com/
 
 ## Overview -
 
