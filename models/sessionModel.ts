@@ -5,20 +5,23 @@ interface ISession extends Document {
   loginTime: Date;
   logoutTime: Date;
   ipAddress: string;
-  createdAt: Date,
-  updatedAt: Date,
-  sessionToken: string
+  createdAt: Date;
+  updatedAt: Date;
+  sessionToken: string;
 }
 
-const SessionSchema: Schema = new Schema({
-  user: { type: Schema.Types.ObjectId, ref: "User", required: true },
-  loginTime: { type: Date, default: Date.now },
-  logoutTime: { type: Date },
-  ipAddress: { type: String, required: true },
-  sessionToken: { type: String },
-  createdAt: { type: Date, default: Date.now },
-  updatedAt: { type: Date, default: Date.now },
-});
+const SessionSchema: Schema = new Schema(
+  {
+    user: { type: Schema.Types.ObjectId, ref: "User", required: true},
+    loginTime: { type: Date, default: Date.now },
+    logoutTime: { type: Date },
+    ipAddress: { type: String, required: true },
+    sessionToken: { type: String, require: true },
+  },
+  {
+    timestamps: true,
+  }
+);
 
 const Session = mongoose.model<ISession>("Session", SessionSchema);
 

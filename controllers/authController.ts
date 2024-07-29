@@ -3,6 +3,7 @@ import { registerUser, loginUser } from "../services/authService";
 import logger from "../logger/logger";
 import SessionModel from "../models/sessionModel";
 import { JwtPayload } from "jsonwebtoken";
+import { UserModel } from "../models/userModel";
 
 interface CustomRequest extends Request {
   user?: { role: string } | JwtPayload | string;
@@ -26,12 +27,21 @@ export const login = async (req: CustomRequest, res: Response) => {
 
   try {
     const token = await loginUser(email, password);
-    const ipAddress = req.socket.remoteAddress;
+    const ipAddress = req.socket.remoteAddress || "unknown";
 
-    const userSession = await new SessionModel({ user: req.user, ipAddress, sessionToken: token.token });
+    const user = await UserModel.findOne({ email });
+
+    // Create a new session
+    const userSession = new SessionModel({
+      user,
+      ipAddress,
+      sessionToken: token.token,
+      loginTime: new Date(),
+    });
     await userSession.save();
-    res.status(200).json({ token, message: `User logged in successfully !` });
+
+    res.status(200).json({ token, message: `User logged in successfully!` });
   } catch (error) {
-    res.status(400).json({ error: error });
+    res.status(400).json({ error: error || "An error occurred" });
   }
 };

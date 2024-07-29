@@ -29,9 +29,9 @@ const SessionSchema = new mongoose_1.Schema({
     loginTime: { type: Date, default: Date.now },
     logoutTime: { type: Date },
     ipAddress: { type: String, required: true },
-    sessionToken: { type: String },
-    createdAt: { type: Date, default: Date.now },
-    updatedAt: { type: Date, default: Date.now },
+    sessionToken: { type: String, require: true },
+}, {
+    timestamps: true,
 });
 const Session = mongoose_1.default.model("Session", SessionSchema);
 exports.default = Session;
