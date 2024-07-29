@@ -1,9 +1,9 @@
-// import { Router } from 'express';
-// import { processPayment } from '../controllers/paymentController';
-// import { authenticate } from '../middleware/authMiddleware';
+import { Router } from 'express';
+import { processPayment } from '../controllers/paymentController';
+import { authorization } from '../middleware/authMiddleware';
 
-// const router = Router();
+const router = Router();
 
-// router.post('/', authenticate, processPayment);
+router.post('/payment', authorization, processPayment);
 
-// export default router;
+export default router;

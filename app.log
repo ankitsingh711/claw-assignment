@@ -233,3 +233,25 @@
 2024-07-29T04:58:40.867Z [info]: User logged in successfully - admin@mail.com
 2024-07-29T05:01:26.452Z [info]: Connected to the DB ! and Server is running on PORT 9800
 2024-07-29T05:01:27.617Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T05:01:58.223Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T05:02:02.772Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T05:03:02.477Z [error]: Invalid Token: jwt expired
+2024-07-29T05:03:17.994Z [info]: Token verified successfully
+2024-07-29T05:03:17.997Z [info]: Token verified successfully
+2024-07-29T05:03:18.000Z [info]: Token verified successfully
+2024-07-29T05:03:18.002Z [info]: Token verified successfully
+2024-07-29T05:04:17.477Z [info]: Token verified successfully
+2024-07-29T05:04:17.483Z [info]: Token verified successfully
+2024-07-29T05:04:17.484Z [info]: Token verified successfully
+2024-07-29T05:04:17.486Z [info]: Token verified successfully
+2024-07-29T05:04:18.383Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T05:19:23.450Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T05:21:01.704Z [error]: Invalid Token: jwt expired
+2024-07-29T05:21:04.531Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T05:21:21.443Z [info]: Token verified successfully
+2024-07-29T05:21:21.445Z [info]: Token verified successfully
+2024-07-29T05:21:21.447Z [info]: Token verified successfully
+2024-07-29T05:21:42.723Z [info]: Token verified successfully
+2024-07-29T05:21:42.726Z [info]: Token verified successfully
+2024-07-29T05:21:42.728Z [info]: Token verified successfully
+2024-07-29T05:21:42.731Z [info]: Token verified successfully

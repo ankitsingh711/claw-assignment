@@ -1,5 +1,5 @@
 import { Response, Request } from 'express';
-import Session from '../models/sessionModel';
+import SessionModel from '../models/sessionModel';
 import { IUser } from '../models/userModel';
 
 interface CustomRequest extends Request {
@@ -12,7 +12,7 @@ export const getSessions = async (req: CustomRequest, res: Response) => {
       return res.status(401).json({ error: 'Unauthorized' });
     }
 
-    const sessions = await Session.find({ user: req.user });
+    const sessions = await SessionModel.find();
     res.status(200).json(sessions);
   } catch (error) {
     console.log(error);

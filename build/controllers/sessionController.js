@@ -19,7 +19,7 @@ const getSessions = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         if (!req.user) {
             return res.status(401).json({ error: 'Unauthorized' });
         }
-        const sessions = yield sessionModel_1.default.find({ user: req.user });
+        const sessions = yield sessionModel_1.default.find();
         res.status(200).json(sessions);
     }
     catch (error) {

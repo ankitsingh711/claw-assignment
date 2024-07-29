@@ -14,25 +14,25 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.processPayment = void 0;
 const stripe_1 = __importDefault(require("../config/stripe"));
-const ordersModel_1 = __importDefault(require("../models/ordersModel"));
+const ordersModel_1 = require("../models/ordersModel");
 const processPayment = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { orderId, paymentMethodId } = req.body;
     try {
-        const order = yield ordersModel_1.default.findById(orderId).populate('products.product');
+        const order = yield ordersModel_1.Order.findById(orderId).populate("products.product");
         if (!order)
-            return res.status(404).json({ error: 'Order not found' });
+            return res.status(404).json({ error: "Order not found" });
         const paymentIntent = yield stripe_1.default.paymentIntents.create({
-            amount: order.totalAmount * 100, // amount in cents
-            currency: 'usd',
+            amount: order.total * 100,
+            currency: "inr",
             payment_method: paymentMethodId,
             confirm: true,
         });
-        order.status = 'completed';
+        order.status = "completed";
         yield order.save();
         res.status(200).json({ success: true, paymentIntent });
     }
     catch (error) {
-        res.status(500).json({ error: 'Payment processing failed' });
+        res.status(500).json({ error: "Payment processing failed" });
     }
 });
 exports.processPayment = processPayment;

@@ -23,7 +23,7 @@ const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const cartRoutes_1 = __importDefault(require("./routes/cartRoutes"));
 const orderRoutes_1 = __importDefault(require("./routes/orderRoutes"));
 const sessionRoutes_1 = __importDefault(require("./routes/sessionRoutes"));
-// import paymentRoutes from './routes/paymentRoutes';
+const paymentRoutes_1 = __importDefault(require("./routes/paymentRoutes"));
 const cookieParser = require("cookie-parser");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
@@ -42,7 +42,7 @@ app.use('/', productRoutes_1.default);
 app.use('/', cartRoutes_1.default);
 app.use('/', orderRoutes_1.default);
 app.use('/', sessionRoutes_1.default);
-// app.use('/', paymentRoutes);
+app.use('/', paymentRoutes_1.default);
 // Basic Route
 app.get("/", (req, res) => {
     res.send("E-Commerce Platform with Advanced Features");
