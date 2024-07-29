@@ -37,16 +37,16 @@ app.use((0, cors_1.default)({
     origin: process.env.NODE_ENV || "*",
 }));
 app.use(cookieParser());
+// Basic Route
+app.get("/", (req, res) => {
+    res.send("E-Commerce Platform with Advanced Features");
+});
 app.use('/', authRoutes_1.default);
 app.use('/', productRoutes_1.default);
 app.use('/', cartRoutes_1.default);
 app.use('/', orderRoutes_1.default);
 app.use('/', sessionRoutes_1.default);
 app.use('/', paymentRoutes_1.default);
-// Basic Route
-app.get("/", (req, res) => {
-    res.send("E-Commerce Platform with Advanced Features");
-});
 // Start the server :
 app.listen(PORT, () => __awaiter(void 0, void 0, void 0, function* () {
     try {

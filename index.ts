@@ -33,6 +33,11 @@ app.use(
 );
 app.use(cookieParser());
 
+// Basic Route
+app.get("/", (req: Request, res: Response) => {
+  res.send("E-Commerce Platform with Advanced Features");
+});
+
 app.use('/', userRoutes);
 app.use('/', productRoutes);
 app.use('/', cartRoutes);
@@ -40,10 +45,6 @@ app.use('/', orderRoutes);
 app.use('/', sessionRoutes);
 app.use('/', paymentRoutes);
 
-// Basic Route
-app.get("/", (req: Request, res: Response) => {
-  res.send("E-Commerce Platform with Advanced Features");
-});
 
 // Start the server :
 
