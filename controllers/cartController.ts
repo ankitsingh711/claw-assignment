@@ -4,12 +4,9 @@ import logger from "../logger/logger";
 
 export const addToCart = async (req: Request, res: Response) => {
   const { productId, quantity } = req.body;
-  console.log("productId -->", productId);
-  console.log("quantity -->", quantity);
 
   try {
     const product = await Product.findById(productId);
-    console.log("product found --->", product);
 
     if (!product) return res.status(404).json({ error: "Product not found" });
 
