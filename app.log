@@ -283,3 +283,9 @@
 2024-07-29T05:50:47.819Z [info]: Connected to the DB ! and Server is running on PORT 9800
 2024-07-29T05:50:53.834Z [info]: Connected to the DB ! and Server is running on PORT 9800
 2024-07-29T05:51:08.714Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T05:58:15.236Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T07:03:53.206Z [info]: Connected to the DB ! and Server is running on PORT 9800
+2024-07-29T07:03:57.683Z [error]: Invalid Token: jwt expired
+2024-07-29T07:04:02.167Z [info]: User logged in successfully - admin@mail.com
+2024-07-29T07:04:20.014Z [info]: Token verified successfully
+2024-07-29T07:06:28.191Z [error]: Invalid Token: jwt expired
