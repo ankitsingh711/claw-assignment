@@ -28,7 +28,7 @@ app.use(
 
 app.use(
   cors({
-    origin: process.env.NODE_ENV || "*",
+    origin:"*",
   })
 );
 app.use(cookieParser());
