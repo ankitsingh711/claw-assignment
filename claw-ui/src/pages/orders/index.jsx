@@ -6,7 +6,12 @@ const OrdersPage = () => {
 
   useEffect(() => {
     const fetchOrders = async () => {
-      const response = await axios.get('/api/orders');
+      const response = await axios.get('https://claw-assignment.onrender.com/orders', {
+        method: 'GET',
+        headers: {
+          Authorization: `Bearer ${sessionStorage.getItem('token')}`
+        }
+      });
       setOrders(response.data);
     };
     fetchOrders();
